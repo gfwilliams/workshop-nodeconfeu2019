@@ -3,6 +3,8 @@
 By default the Bangles didn't have an AI model installed - so to start off
 the AI working you just need to load one into the on-watch storage.
 
+If you just want to try this out quickly, install the 'Gesture Test' app from the app store. The existing model is not trained on a very wide variety of data and will almost certainly not work for you very well - this should change in the future though!
+
 When you're connected with the Web IDE, copy and paste the following:
 
 ```
