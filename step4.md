@@ -38,3 +38,37 @@ require("Storage").write(".tfmodel",atob("..."))
 and paste it into the left-hand side of the IDE.
 
 The `.tfnames` file maps the vector output of Tensorflow to human-readable names - so you'll need to modify it only if you plan on adding new gesture names.
+
+## Getting more data!
+
+If you need more data to train your tensorflow model, log in via the Web IDE
+then upload the following code:
+
+```
+name="Gesture";
+
+function gotGesture(d) {  
+  print(name+"("+d.length/3+"),",d.slice().join(","));
+  g.clear();
+  g.setColor(1,1,1);
+  var my = g.getHeight()/2;
+  var sy = my/128;
+  var sx = g.getWidth()/(50*3);
+  g.drawLine(0,my,g.getWidth(),my);
+  for (var i=0;i<d.length-3;i+=3) {
+    for (var c=0;c<3;c++) {
+      g.setColor(c==0,c==1,c==2);
+      g.drawLine(i*sx, my+d[i+c]*sy, (i+3)*sx, my+d[i+c+3]*sy);
+    }
+  }
+  g.flip(1);
+}
+
+Bangle.on('gesture',gotGesture);
+```
+
+Run `name="MyGesture"` then repeat the gesture over and over. Each time
+a line of data will be output to the Web IDE console and the display
+will show a graph of the acceleration.
+
+You can then copy/paste that that data and use it in the Google Colab.
