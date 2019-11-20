@@ -84,7 +84,9 @@ simplest way to load it in right now is to wrap it in a 'Storage.write'
 command to write it into flash memory - the Web IDE will get extended
 at some point in the future to make this easier...
 
-First, come up with a unique <=7 character ID for your app.
+First, come up with a unique 7 character (or less) ID for your app. Ideally
+it shouldn't already be listed in https://github.com/espruino/BangleApps/tree/master/apps
+
 I'll use `timer`. Now, use a templated string to wrap
 your code up:
 
