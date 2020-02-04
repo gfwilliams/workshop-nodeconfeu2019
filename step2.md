@@ -96,6 +96,25 @@ require("Storage").write("-timer",`
 `);
 ```
 
+**NOTE:** You have to be careful with escape sequences in Strings here. If you
+use templates strings (or escape characters) in your code you can hit issues
+here and you'll need to add `\` to escape them. For example:
+
+```
+`print("Hello\nWorld")`
+print("Hello
+World")
+
+`print("Hello\\nWorld")`
+print("Hello\nWorld")
+
+`print(`Hello World`)`
+// syntax error
+
+`print(\`Hello World\`)`
+// ok
+```
+
 And then we need some JSON to tell Bangle.js's menu
 what the app is called and what to run:
 
