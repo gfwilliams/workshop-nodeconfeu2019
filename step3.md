@@ -1,5 +1,7 @@
 # STEP 3 - Submitting an app
 
+<span style="color:red">:warning: This tutorial is out of date for 2v05 and later Bangle.js firmwares. Check out https://www.espruino.com/Bangle.js#tutorials instead:warning:</span>
+
 * Fork https://github.com/espruino/BangleApps
 * You can either edit it using GitHub or can clone locally and edit
 * To test, enable 'GitHub Pages' on the `master` branch in GitHub settings

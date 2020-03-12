@@ -16,7 +16,7 @@ You should hopefully be connected now! If not, take a look at http://www.espruin
 
 If you just want to get started and have an Android phone, you can use that too! If you don't have an external keyboard then you might want to install the free 'Hackers Keyboard' app to get access to arrow keys via touchscreen. You may also be able to mirror/control your phone from your PC.
 
-**Note:** If you've used Espruino before, make sure `Save on Send` in `Communication` Settings (top right) is set to `To RAM` otherwise you will remove the watch's built-in menu (you can just re-add it using https://banglejs.com/apps)
+**Note:** If you've used Espruino before, make sure the Upload button (middle of the screen) shows `RAM` underneath it. Otherwise by writing to `Flash` you can remove the watch's built-in menu (you can just re-add it using https://banglejs.com/apps)
 
 ## Once connected
 
@@ -90,10 +90,16 @@ But the screen itself contains a VT100 terminal, so you can use `Terminal.print`
 Terminal.println("Hello World")
 ```
 
-It's worth noting that when you're disconnected from Bluetooth, Bangle.js will by default write any messages from `console.log` - as well as any Exceptions - to the display. We'll add a 'Logging' section to the Settings app shortly to stop this, but it's a good way to see if your app has problems!
+But these will scroll the screen up, which may make currently running apps
+look a bit strange!
 
+It's worth noting that when you're disconnected from Bluetooth, Bangle.js will
+write any messages from `console.log` (as well as any Exceptions) to the display
+if `Debug info` is set to `Show` in `Settings`. This can be a great way of
+seeing if your app is failing in unexpected ways when in every day use.
 
-Want to react to user input on the buttons? You can query the button state. BTN1 is the top button, BTN2 is the middle, BTN3 is the bottom:
+Want to react to user input on the buttons? You can query the button state.
+**BTN1** is the top button, **BTN2** is the middle, **BTN3** is the bottom:
 
 ```
 BTN2.read();

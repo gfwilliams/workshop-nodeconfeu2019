@@ -1,5 +1,7 @@
 # STEP 2 - Making an app
 
+<span style="color:red">:warning: This tutorial is out of date for 2v05 and later Bangle.js firmwares. Check out https://www.espruino.com/Bangle.js#tutorials instead:warning:</span>
+
 We're now connected and can write some simple code - let's have a go at making a timer app.
 
 To do this, it's best to use the right-hand side of the IDE - once uploaded you can tweak values and call functions using the REPL on the left if you want to.
